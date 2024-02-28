@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace BubbleSortDemo
+namespace BubbleSort
 {
-    class Program
+    class Demo
     {
         static void Main(string[] args)
         {

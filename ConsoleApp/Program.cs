@@ -1,47 +1,42 @@
 ﻿using System;
 
-namespace classdemo
+namespace BubbleSortDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] numbers = { 5, 72, 3, 14, 7, 1 };
-            BubbleSort(numbers);
+
+            
+
+            Bubble_Sort(numbers);
 
             Console.WriteLine("Sorted array:");
             PrintArray(numbers);
         }
 
-        static void BubbleSort(int[] arr)
+        
+        static void Bubble_Sort(int[] arr)
         {
-            bool swapped;
-
-            do
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                swapped = false;
-                for (int i = 0; i < arr.Length - 1; i++)
+                for (int x = 0; x < arr.Length - i - 1; x++)
                 {
-                    if (arr[i] > arr[i + 1])
+                    if (arr[x] > arr[x + 1])
                     {
-                        Swap(arr, i, i + 1);
-                        swapped = true;
+                        int temp = arr[x];
+                        arr[x] = arr[x + 1];
+                        arr[x + 1] = temp;
                     }
                 }
-            } while (swapped);
+            }
         }
 
-        static void Swap(int[] arr, int index1, int index2)
-        {
-            int temp = arr[index1];
-            arr[index1] = arr[index2];
-            arr[index2] = temp;
-        }
-
+        
         static void PrintArray(int[] arr)
         {
             Console.WriteLine(string.Join(", ", arr));
         }
     }
 }
-

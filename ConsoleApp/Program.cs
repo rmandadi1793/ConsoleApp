@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Revanth Mandadi
+// 2/28/2024
+//U16653207
+// This code explains about bubble sort algorithm and solved.
+ 
+using System;
 
 namespace BubbleSort
 {

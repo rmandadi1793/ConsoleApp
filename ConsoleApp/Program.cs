@@ -7,16 +7,10 @@ namespace BubbleSortDemo
         static void Main(string[] args)
         {
             int[] numbers = { 5, 72, 3, 14, 7, 1 };
-
-            
-
             Bubble_Sort(numbers);
-
             Console.WriteLine("Sorted array:");
             PrintArray(numbers);
         }
-
-        
         static void Bubble_Sort(int[] arr)
         {
             for (int i = 0; i < arr.Length - 1; i++)
@@ -32,8 +26,6 @@ namespace BubbleSortDemo
                 }
             }
         }
-
-        
         static void PrintArray(int[] arr)
         {
             Console.WriteLine(string.Join(", ", arr));
